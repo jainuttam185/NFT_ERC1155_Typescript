@@ -118,8 +118,9 @@ class CampaignIndex extends Component {
       this.setState({
         number: await this.state.contract.NumberOfTokens(),
       });
-    } catch (error: any) {
-      const errorMessage = error.message.split("(")[0];
+    } catch (error) {
+      const err = error as Error;
+      const errorMessage = err.message.split("(")[0];
       const fullMessage = errorMessage[0].toUpperCase() + errorMessage.slice(1);
       toast(fullMessage);
     } finally {
@@ -147,8 +148,9 @@ class CampaignIndex extends Component {
       this.setState({
         number: await this.state.contract.NumberOfTokens(),
       });
-    } catch (error: any) {
-      const errorMessage = error.message.split("(")[0];
+    } catch (error) {
+      const err = error as Error; 
+      const errorMessage = err.message.split("(")[0];
       const fullMessage = errorMessage[0].toUpperCase() + errorMessage.slice(1);
       toast(fullMessage);
     } finally {
