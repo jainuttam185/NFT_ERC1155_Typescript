@@ -43,8 +43,6 @@ node_modules
 /artifacts
 
 # TypeChain files
-/typechain
-/typechain-types
 
 # solidity-coverage files
 /coverage
@@ -58,8 +56,7 @@ node_modules
 /artifacts
 
 # TypeChain files
-/typechain
-/typechain-types
+
 
 # solidity-coverage files
 /coverage
